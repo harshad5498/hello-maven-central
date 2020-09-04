@@ -13,7 +13,7 @@
 	<artifactId>hello-maven-central</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<description>Demo project for Spring Boot</description>
-
+	<name>hello maven central</name>
 	<url>https://github.com/harshad5498/hello-maven-central</url>
 
 	<organization>
@@ -21,12 +21,17 @@
 		<name>harshad5498</name>
 	</organization>
 	<inceptionYear>2016</inceptionYear>
-
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
 	<developers>
 		<developer>
 			<name>Harshad</name>
 			<email>harshadkadam10@gmail.com</email>
-			<organization>harshad5498</organization>
+			<organization>com.github.harshad5498</organization>
 			<organizationUrl>https://github.com/harshad5498</organizationUrl>
 			<timezone>UTC+05:30</timezone>
 		</developer>
@@ -50,22 +55,15 @@
 
 
 	<scm>
-		<connection>scm:git:git@github.com/harshad5498/hello-maven-central.git</connection>
-		<developerConnection>scm:git:git@github.com/harshad5498/hello-maven-central.git</developerConnection>
+		<connection>scm:git:git://github.com/harshad5498/hello-maven-central.git</connection>
+		<developerConnection>scm:git:ssh://github.com/harshad5498/hello-maven-central.git</developerConnection>
 		<url>https://github.com/harshad5498/hello-maven-central</url>
-		<tag>HEAD</tag>
 	</scm>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -89,7 +87,7 @@
 				<configuration>
 					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+					<skipStaging>true</skipStaging>
 				</configuration>
 				<executions>
 					<execution>
@@ -136,37 +134,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<profiles>
-		<!-- GPG Signature on release -->
-		<profile>
-			<id>release-sign-artifacts</id>
-			<activation>
-				<property>
-					<name>performRelease</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.6</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 
 	<repositories>
 		<repository>
