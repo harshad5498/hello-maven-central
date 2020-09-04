@@ -17,6 +17,7 @@ public class UserComponent {
 		users.put(6, "Oliver Queen (Green Arrow)");
 		users.put(7, "Clark Kent (SuperMan)");
 		users.put(8, "Peter Parker (SpiderMan)");
+		users.put(9, "Bruce Wayne (BatMan)");
 		
 	}
 	
