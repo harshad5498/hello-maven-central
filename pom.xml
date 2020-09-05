@@ -69,9 +69,6 @@
 					<localCheckout>true</localCheckout>
 					<pushChanges>false</pushChanges>
 					<mavenExecutorId>forked-path</mavenExecutorId>
-					<checkModificationExcludes>
-						<checkModificationExclude>pom.xml</checkModificationExclude>
-					</checkModificationExcludes>
 				</configuration>
 				<dependencies>
 					<dependency>
