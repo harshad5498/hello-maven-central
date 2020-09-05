@@ -2,9 +2,6 @@ package com.github.harshad5498.hellomavencentral.component;
 
 import java.util.HashMap;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class UserComponent {
 	
 	private HashMap<Integer,String> users = new HashMap<Integer,String>();
